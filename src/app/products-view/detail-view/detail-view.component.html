@@ -1,0 +1,26 @@
+<div class="detail" *ngIf="selectedPieceSgn() as selectedPiece; else loader" >
+  <h3>{{ selectedPiece.title }}</h3>
+  <div class="image-wrapper">
+    <img *ngFor="let imageUrl of selectedPiece.image" [src]="imagesBasicUrl + imageUrl" [alt]="selectedPiece.title" />
+    <div style="width: 100%; height: auto; text-align:center;margin:0; padding:0;">
+    </div>
+       <div class="description">
+      <p>{{ selectedPiece.description }}</p>
+      <h4><b>Materials: </b><span class="ingredient" *ngFor="let ingredient of selectedPiece.materials">{{ ingredient }}</span></h4>
+      <p class="price">Price: <span>{{ selectedPiece.price | currency:'EUR':'symbol'}}</span></p>
+    </div>
+  </div>
+
+  <div class="quantity-selector">
+    <button (click)="cartService.decrementCartItem(selectedPiece)">-</button>
+    <span (click)="cartService.addCartItem(selectedPiece)">{{ selectedPiece?.quantity ? selectedPiece?.quantity + ' in Cart' : 'Add to Cart'}}</span>
+    <button (click)="cartService.addCartItem(selectedPiece)">+</button>
+  </div>
+</div>
+
+<ng-template #loader>
+  <div class="form-wrapper-spinner">
+      <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
+

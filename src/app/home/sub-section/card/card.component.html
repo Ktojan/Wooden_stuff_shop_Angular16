@@ -1,0 +1,17 @@
+<div class="piece-item">
+  <button
+  ><img (click)="selectPiece(piece)" [src]="imagesBasicUrl + piece.thumb" [alt]="piece.title" /></button>
+  <div class="quantity-selector">
+    <button (click)="cartService.decrementCartItem(piece)">-</button>
+    <span (click)="cartService.addCartItem(piece)">{{ piece.quantity ? piece.quantity + ' in Cart' : 'Add to Cart'}}</span>
+    <button (click)="cartService.addCartItem(piece)">+</button>
+  </div>
+  <div class="piece-info">
+    <div>
+      <h4>{{ piece.title }}</h4>
+    </div>
+    <div>
+      <p>{{ piece.price | currency:'EUR':'symbol'}}</p>
+    </div>
+  </div>
+</div>

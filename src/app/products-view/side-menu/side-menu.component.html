@@ -1,0 +1,18 @@
+<div class="side-nav">
+  <button
+    *ngFor="let piece of pieces$ | async"
+    [attr.data-testId]="(customize ? 'customize-view-' : 'detail-view-') + piece.id"
+    class="image-button"
+    [routerLink]="[customize ? customizeLink : detailLink]"
+    [queryParams]="{productId: piece.id}"
+    routerLinkActive="active-link"
+    ariaCurrentWhenActive="page"
+    queryParamsHandling="merge"
+  >
+    <img
+      [src]="imagesBasicUrl + piece.thumb"
+      [alt]="piece.title"
+      [matTooltip]="piece.title"
+    />
+  </button>
+</div>

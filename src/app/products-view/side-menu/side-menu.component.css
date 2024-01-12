@@ -1,0 +1,35 @@
+
+.side-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.image-button {
+  margin: 10px;
+  border: none;
+  padding: 0;
+  text-align: center;
+  background-color: rgba(256, 256, 256, 1);
+  width: 150px;
+  cursor: pointer;
+}
+
+.image-button img {
+  width: 150px;
+  height: 150px;
+}
+
+.image-button img:hover {
+  width: 170px;
+  height: 170px;
+  filter: drop-shadow(0 0 0.5rem rgb(33, 18, 16));
+}
+
+.active-link img {
+  width: 170px;
+  height: 170px;
+  border: solid 3px white;
+  filter: drop-shadow(0 0 0.5rem rgb(33, 18, 16));
+}
+

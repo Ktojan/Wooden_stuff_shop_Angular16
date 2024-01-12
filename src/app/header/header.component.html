@@ -1,0 +1,57 @@
+<header>
+  <div class="site-header-wrapper">
+    <h1>
+      <button [routerLink]="['/']" mat-menu-item>
+        <img [src]="imagesBasicUrl + 'logo.png'" class="logo" alt="Woodshop Logo" />
+      </button>
+    </h1>
+    <nav>
+      <ul>
+        <li>
+          <button data-testid="About" mat-button class="menu-item" [routerLink]="ROUTER_TOKENS.ABOUT"
+            routerLinkActive="active-link" ariaCurrentWhenActive="page">About</button>
+        </li>
+        <li>
+          <button class="menu-item" data-testid="Shop" mat-button [matMenuTriggerFor]="menu"
+            routerLinkActive="active-link" ariaCurrentWhenActive="page">Shop
+            <span>&#8964;</span>
+            <mat-menu class="menu-dropdown" #menu="matMenu">
+              <button *ngFor="let item of Category | keyvalue" mat-menu-item
+                [routerLink]="['./' + ROUTER_TOKENS.SHOP, item.value]" routerLinkActive="active-link-li"
+                ariaCurrentWhenActive="page">{{item.value}}</button>
+            </mat-menu>
+          </button>
+        </li>
+        <li>
+          <button data-testid="Contact" mat-button class="menu-item"
+            [routerLink]="ROUTER_TOKENS.CONTACT"
+            [matTooltip]="isLoggedIn ? '' : 'Available for logged in users'"
+            routerLinkActive="active-link" ariaCurrentWhenActive="page">Contact</button>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-icons">
+      <ul>
+        <li *ngIf="!isLoggedIn; else forLoggedUser">
+            <input matInput type="text" (focus)="authService.setUser()" (keyup.enter)="(name.value) ? signInOut(name.value) : ''"
+              #name>
+          <button (click)="(name.value) ? signInOut(name.value) : ''" mat-button>Log In</button>
+        </li>
+        <ng-template #forLoggedUser>
+          <li>
+            <button (click)="signInOut('')" mat-button>Logout</button>
+          </li>
+          <li style="padding-left: 5%;">
+            <label><b>{{(currentUser | async) | uppercase}}</b></label>
+          </li>
+        </ng-template>
+        <li>
+          <button [routerLink]="['/', { outlets }]" queryParamsHandling="merge" mat-menu-item>
+            <span class="total-items">{{ totalItems() }}</span>
+            <img [src]="imagesBasicUrl + 'cart-icon.png'" alt="shopping cart icon" />
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

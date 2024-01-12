@@ -1,0 +1,64 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Calibri, "Helvetica Neue", sans-serif; }
+
+body {
+  background-color: rgba(253, 246, 246, 1);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.main-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  padding: 51px 51px 0 51px;
+  text-transform: uppercase;
+}
+
+.carousel {
+  height: 25vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-image {
+  height: auto;
+  position: absolute;
+  width: 100%;
+}
+
+.carousel-image img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.full-page-image {
+  height: 75vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.form-wrapper h3 {
+  color: rgba(54, 48, 44, 1);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  line-height: 1.7rem;
+}
+
+.form-wrapper p {
+  color: rgba(54, 48, 44, 1);
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin: 0 0 28px 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+:disabled {
+  cursor: not-allowed; 
+}
