@@ -11,5 +11,7 @@ npm-debug.log
 .history/*
 
 # Miscellaneous
+/dist
+/build
 /.angular/cache
 /typings
