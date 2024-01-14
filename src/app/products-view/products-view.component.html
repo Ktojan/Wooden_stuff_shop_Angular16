@@ -1,19 +1,14 @@
 <section class="main-content">
   <div class="category-wrapper">
     <div class="side-nav-wrapper">
-      <mat-accordion class="side-nav-wrapper">
-        <h3>{{currentCategory$ | async}}</h3>
-        <mat-expansion-panel hideToggle="false" [disabled]="!(isLoggedIn$ | async)">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Customize Pieces
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <app-side-menu [customize]="true"
-          ></app-side-menu>
-        </mat-expansion-panel>
-      </mat-accordion>
-      <app-side-menu></app-side-menu>
+      <h3>{{currentCategory$ | async}}</h3>
+      <mat-slide-toggle 
+        style="margin: 0 30px 15px;"
+        [(ngModel)]="customizeMode"
+        [matTooltip]="(isLoggedIn$ | async) ? '' : 'Customizing is available for logged users'"
+        [disabled]="!(isLoggedIn$ | async)">{{customizeMode ? 'Customize Pieces' : 'View Details Mode'}}
+      </mat-slide-toggle>    
+      <app-side-menu [customize]="customizeMode"></app-side-menu>
     </div>
     <div class="detail-wrapper">
       <router-outlet/>

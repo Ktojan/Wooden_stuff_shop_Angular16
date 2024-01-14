@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { BehaviorSubject, map, of, switchMap, tap, delay, mergeMap } from 'rxjs';
+import { BehaviorSubject, map, of, switchMap, delay } from 'rxjs';
 import { Category, Piece} from '../models/piece';
 import { PIECES } from '../models/pieces-data.mock';
 import { ActivatedRoute } from '@angular/router';
@@ -32,8 +32,7 @@ export class PieceService {
           }
 
           return undefined;
-        }),
-        tap(res => console.log('piece-service switchMap ', res))
+        })
       )
     )
   );
