@@ -1,3 +1,5 @@
+![image](https://github.com/Ktojan/Wooden_stuff_shop_Angular16/assets/32598218/debfcb8d-3474-4d15-9cd6-edb7838d7740)
+
 # WoodenShopAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
