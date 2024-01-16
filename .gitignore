@@ -12,6 +12,8 @@ npm-debug.log
 
 # Miscellaneous
 /dist
+/docs
 /build
 /.angular/cache
 /typings
+.package-lock.json
