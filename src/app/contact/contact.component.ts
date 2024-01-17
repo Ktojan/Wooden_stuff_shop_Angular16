@@ -13,6 +13,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import { AuthService } from '../services/auth.service';
 import { imagesBasicUrl } from '../shared-ui/constants';
 import { FromSubmittedComponent } from '../shared-ui/form-submitted.component';
+import { LocaleTogglerComponent } from '../shared-ui/locale-toggler.component';
+import { TranslocoPipe } from '@ngneat/transloco';
 
 @Component({
   selector: 'app-contact',
@@ -25,7 +27,9 @@ import { FromSubmittedComponent } from '../shared-ui/form-submitted.component';
     MatSelectModule,
     MatFormFieldModule,
     MatRadioModule,
-    FromSubmittedComponent
+    FromSubmittedComponent,
+    LocaleTogglerComponent,
+    TranslocoPipe
   ],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']

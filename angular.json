@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "wooden-shop-angular": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "pt-PT": "src/locale/messages.pt.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +19,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": ["pt-PT"],
             "outputPath": "dist/wooden-shop-angular",
             "index": "src/index.html",
             "main": "src/main.ts",

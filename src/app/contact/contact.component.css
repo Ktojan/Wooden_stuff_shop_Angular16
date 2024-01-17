@@ -124,3 +124,9 @@ button {
 .mat-mdc-radio-button ~ .mat-mdc-radio-button {
   margin-left: 16px;
 }
+
+.locales {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 1rem;
+}

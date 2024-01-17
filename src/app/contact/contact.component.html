@@ -1,39 +1,41 @@
 <section class="main-content">
   <div *ngIf="!submitted;" class="contact-wrapper">
     <div  class="image-wrapper">
-      <img [src]="imagesBasicUrl + 'whiskey.jpg'" alt="A woman, a whiskey or maybe both?" />
+      <img [src]="imagesBasicUrl + 'whiskey.jpg'" [alt]="'CONTACT_IMAGE_ALT' | transloco " />
     </div>
     <div class="form-wrapper">
-      <p><b>Please fill out the form to check if you're able to. Don't focus on left.</b></p>
+      <locale-toggler class="locales"></locale-toggler>
+      <p><b>{{ 'CONTACT.INTRO' | transloco}}</b></p>
+
       <fieldset>
         <form #contactForm="ngForm">
           <div class="form-group">
-            <label for="whiskey">Do you wanna whiskey?</label>
+            <label for="whiskey">{{ 'CONTACT.QUESTION1' | transloco }}</label>
             <mat-radio-group id="whiskey" #whiskey="ngModel" name="whiskey" [(ngModel)]="model.whiskey">
-              <mat-radio-button [value]="true">Yes, sure</mat-radio-button>
-              <mat-radio-button [value]="false">Aaah, no, thanks</mat-radio-button>
+              <mat-radio-button [value]="true">{{ 'CONTACT.RESPONSE1_YES' | transloco}}</mat-radio-button>
+              <mat-radio-button [value]="false">{{ 'CONTACT.RESPONSE1_NO' | transloco}}</mat-radio-button>
             </mat-radio-group>
           </div>
 
           <div class="form-group">
-            <label>Your favorite female chest size</label>
+            <label>{{ 'CONTACT.QUESTION2' | transloco }}</label>
             <mat-form-field>
               <mat-select #size="ngModel" id="size" name="size" [(ngModel)]="model.size">
                 <mat-option *ngFor="let i of sizes" [value]="i">
-                  {{ i!== 5 ? i : 'Frankly, more than 4th size'}}</mat-option>
+                  {{ i!== 5 ? i : '&#8734;'}}</mat-option>
               </mat-select>
             </mat-form-field>
           </div>
 
           <div class="form-group">
-            <label for="full_name">Name *</label>
+            <label for="full_name">{{ 'CONTACT.NAME' | transloco }} *</label>
             <input type="text" #fullName="ngModel" id="fullName" [(ngModel)]="model.fullName" name="fullName" value="" required/>
             <div *ngIf="fullName.invalid && fullName.touched" class="alert alert-danger">You forgot your name or what?
             </div>
           </div>
 
           <div class="form-group">
-            <label for="comment">Comment *</label>
+            <label for="comment">{{ 'CONTACT.COMMENT' | transloco }} *</label>
             <textarea #comment="ngModel" id="comment" name="comment" [(ngModel)]="model.comment" required></textarea>
             <div *ngIf="comment.invalid && comment.touched" class="alert alert-danger">So, what do you want really?
             </div>
