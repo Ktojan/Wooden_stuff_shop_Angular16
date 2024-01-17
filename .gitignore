@@ -16,4 +16,4 @@ npm-debug.log
 /build
 /.angular/cache
 /typings
-.package-lock.json
+package-lock.json
