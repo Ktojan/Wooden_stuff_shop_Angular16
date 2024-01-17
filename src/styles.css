@@ -62,3 +62,13 @@ button {
 :disabled {
   cursor: not-allowed; 
 }
+
+.github-link {
+  position: fixed;
+  bottom: 1rem;
+  left: 4rem;
+  font-size: 17px;
+  letter-spacing: 1.3px;
+  color: #333333;
+  font-weight: bold;
+}
