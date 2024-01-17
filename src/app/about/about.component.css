@@ -38,4 +38,8 @@
   font-weight: 700;
 }
 
+.locales {
+  display: flex;
+  justify-content: end;
+}
 

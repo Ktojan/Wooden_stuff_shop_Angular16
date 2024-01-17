@@ -1,20 +1,15 @@
 <section class="main-content">
+  <locale-toggler class="locales"></locale-toggler>
   <div class="contact-wrapper">
     <div class="image-wrapper">
-      <img [src]="imagesBasicUrl +'about.jpg'" alt="" />
+      <img i18n-alt [src]="imagesBasicUrl +'about.jpg'" [alt]="'ABOUT_IMAGE_ALT' | transloco " />
     </div>
     <div class="form-wrapper">
-
-      <h3>About the "Wooden Age"</h3>
-      <p>
-        Here you can see some stuff, maden in the amateur workshop during 2022-2023. It's not bad, but not awesome.
-        So-so, I can say. Normal, even with some fresh ideas and decor.</p>
-      <h3>About the Angular 16 project</h3>
-      <p>
-        It's quite simple store (the design and styling were not the keypoints, as you see), but still includes basic Angular
-        concepts, as well as new-versions tricks, in
-        particular:</p>
-      <ul>
+      <h3 i18n>{{ 'ABOUT.TITLE' | transloco }}</h3>
+      <p i18n> {{ 'ABOUT.1_PAR_TEXT' | transloco }}</p>
+      <h3 i18n>{{ 'ABOUT_PROJECT.TITLE' | transloco }}</h3>
+      <p i18n>{{ 'ABOUT_PROJECT.2_PAR_TEXT' | transloco }}</p>
+      <ul> (this list is no sense to translate)
         <li>Combination of Signals and rxjs observables/operators</li>
         <li>Nested router-outlets and auxiliary routes</li>
         <li>Router guards</li>
@@ -22,6 +17,7 @@
         <li>Dynamic templates with 'ng-content' as well as shared templates</li>
         <li>Pipes: async, currency, keyvalue</li>
         <li>Angular Material elements</li>
+        <li>Internationalization (partial, 3 languages) with runtime manual switching</li>
         <li>A lot of one-way, two-ways bindings, template interpolations so on</li>
       </ul>
     </div>

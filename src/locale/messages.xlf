@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="2475047803868555133" datatype="html">
+        <source>The Creator</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1658397958393533821" datatype="html">
+        <source>About the &quot;Wooden Age&quot;</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="138118214729160429" datatype="html">
+        <source> Here you can see some stuff, maden in the amateur workshop during 2022-2023. It&apos;s not bad, but not awesome. So-so, I can say. Normal, even with some fresh ideas and decor.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="675675162275892368" datatype="html">
+        <source>About the Angular 16 project</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8376412359814414050" datatype="html">
+        <source> It&apos;s quite simple store (the design and styling were not the keypoints, as you see), but still includes basic Angular concepts, as well as new-versions tricks, in particular:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">13,16</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
