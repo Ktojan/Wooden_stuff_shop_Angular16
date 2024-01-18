@@ -1,0 +1,22 @@
+{
+  "ABOUT": {
+    "TITLE": "About the 'Wooden Age'",
+    "1_PAR_TEXT": " Here you can see some stuff, maden in the amateur workshop during 2022-2023. It's not bad, but not awesome. So-so, I can say. Normal, even with some fresh ideas and decor."
+  },
+  "ABOUT_PROJECT": {
+    "TITLE": "About the Angular 16 project",
+    "2_PAR_TEXT": "It's quite simple store (the design and styling were not the key points, as you see), but still includes basic Angular concepts, as well as new-versions tricks, in particular:"
+  },
+  "ABOUT_IMAGE_ALT": "The creator",
+  "CONTACT_IMAGE_ALT": "Confess, that you want it",
+  "CONTACT": {
+    "INTRO": "Please fill out the form to check if you're able to. Don't focus on left.",
+    "QUESTION1": "DO YOU WANNA WHISKEY?",
+    "RESPONSE1_YES": "Yes, sure",
+    "RESPONSE1_NO": "Aaah, no, thanks",
+    "QUESTION2": "YOUR FAVORITE FEMALE CHEST SIZE",
+    "NAME": "Name",
+    "COMMENT": "Comment"
+  }
+}
+
