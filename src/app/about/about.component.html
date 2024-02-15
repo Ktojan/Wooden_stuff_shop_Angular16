@@ -2,13 +2,13 @@
   <locale-toggler class="locales"></locale-toggler>
   <div class="contact-wrapper">
     <div class="image-wrapper">
-      <img i18n-alt [src]="imagesBasicUrl +'about.jpg'" [alt]="'ABOUT_IMAGE_ALT' | transloco " />
+      <img [src]="imagesBasicUrl +'about.jpg'" [alt]="'ABOUT_IMAGE_ALT' | transloco " />
     </div>
     <div class="form-wrapper">
-      <h3 i18n>{{ 'ABOUT.TITLE' | transloco }}</h3>
-      <p i18n> {{ 'ABOUT.1_PAR_TEXT' | transloco }}</p>
-      <h3 i18n>{{ 'ABOUT_PROJECT.TITLE' | transloco }}</h3>
-      <p i18n>{{ 'ABOUT_PROJECT.2_PAR_TEXT' | transloco }}</p>
+      <h3>{{ 'ABOUT.TITLE' | transloco }}</h3>
+      <p> {{ 'ABOUT.1_PAR_TEXT' | transloco }}</p>
+      <h3>{{ 'ABOUT_PROJECT.TITLE' | transloco }}</h3>
+      <p>{{ 'ABOUT_PROJECT.2_PAR_TEXT' | transloco }}</p>
       <ul> (this list is no sense to translate)
         <li>Combination of Signals and rxjs observables/operators</li>
         <li>Nested router-outlets and auxiliary routes</li>

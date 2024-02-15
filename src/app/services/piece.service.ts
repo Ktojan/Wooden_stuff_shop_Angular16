@@ -25,7 +25,7 @@ export class PieceService {
   readonly selectedPiece$ = this.selectedPiece.pipe(
     switchMap((id) =>
       this.filteredPieces$.pipe(
-        delay(1500),
+        // delay(1500),
         map((pieces) => {
           if(id){
             return pieces.find((piece) => piece.id === id);
